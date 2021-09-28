@@ -2,7 +2,7 @@
 ## Scripting
 
 ### Crear un usuario mediante el cmdlet New-ADObject
-```
+``` powershell
 New-ADObject -name Usuario22 -type user -ProtectedFromAccidentalDeletion $true -
 ```
 ## Guardar en json nombre de proceso y estado de proceso o prioridad y desde directorio activo leer ese proceso.
