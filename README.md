@@ -1,7 +1,7 @@
 # ASO
 ## Scripting
 
-### Crear un usuario mediante el cmdlet New-ADObject
+## Crear un usuario mediante el cmdlet New-ADObject
 ``` powershell
 New-ADObject -name Usuario22 -type user -ProtectedFromAccidentalDeletion $true -
 ```
