@@ -11,3 +11,4 @@ Get-Process | select name,BasePriority | ConvertTo-Json | out-file C:\xampp\htdo
 Invoke-RestMethod "http://localhost/procesos.json"
 ```
 ## Primer proyecto ASO
+
