@@ -1,6 +1,7 @@
 ## Primer proyecto para la asignatura de ASO
 
-´´´ powershell
+´´´
+
 using assembly System.Windows.Forms
 using namespace System.Windows.Forms
  
