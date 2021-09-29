@@ -16,8 +16,6 @@ class Operacion
     }
 }
  
-# Variables para la creacion del formulario
-
 $arrayoperaciones = New-Object System.Collections.ArrayList
  
 $form = [Form] @{
@@ -56,9 +54,6 @@ $label = [label] @{
  Location = New-Object System.Drawing.Size(120,106)
  Text = 'Operacion'
  }
-
-
- # Formulario
 
 $form.Controls.Add($TextBox)
 $form.Controls.Add($TextBox1)
