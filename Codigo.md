@@ -10,10 +10,10 @@ New-ADObject -name Usuario22 -type user -ProtectedFromAccidentalDeletion $true -
 Get-Process | select name,BasePriority | ConvertTo-Json | out-file C:\xampp\htdocs\procesos.json -Encoding default
 Invoke-RestMethod "http://localhost/procesos.json"
 ```
+## Sacar el padre y abuelo de cada hilo que se está ejecutando
 #### Handle: identificador de un subproceso (hilo). 
 #### ProcessHandle: proceso que creó el subproceso (hilo).
 #### ParentProcessId: identificador único del proceso que crea un proceso.
-## Sacar el padre y abuelo de cada hilo que se está ejecutando
 ``` powershell
 Get-WmiObject -Class Win32_Service | Select-Object Name,ProcessID, (Get-Process -Id ProcessID).name
 
