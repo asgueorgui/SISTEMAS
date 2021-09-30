@@ -1,4 +1,4 @@
-### DECIR QUE HILOS ESTA EJECUTANDO CADA SERVICIO, ADEMAS DE SACARLO ORDENADOR.
+### DECIR QUE HILOS ESTA EJECUTANDO CADA SERVICIO, ADEMAS DE SACARLO ORDENADO.
 ``` powershell
 foreach($servicio in Get-WmiObject win32_service | where state -eq Running)
 {
