@@ -1,7 +1,6 @@
 ## Primer proyecto para la asignatura de ASO
 
-´´´
-
+``` powershell
 using assembly System.Windows.Forms
 using namespace System.Windows.Forms
  
@@ -63,4 +62,4 @@ $form.Controls.Add($label1)
 $form.Controls.Add($button)
 $form.Controls.Add($button1)
 $form.ShowDialog()
-´´´
+```
