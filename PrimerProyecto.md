@@ -1,5 +1,7 @@
 ## Primer proyecto para la asignatura de ASO
 
+### Creacion de formularios en Powershell
+
 ``` powershell
 using assembly System.Windows.Forms
 using namespace System.Windows.Forms
@@ -62,4 +64,18 @@ $form.Controls.Add($label1)
 $form.Controls.Add($button)
 $form.Controls.Add($button1)
 $form.ShowDialog()
+```
+
+### Invocar a la operacion y crear un usuario en el AD, ademas de crear un QR para cada Usuario
+``` powershell
+Invoke-RestMethod "http://192.168.50.51/operaciones.txt"
+
+foreach($usuario in Invoke-RestMethod "http://192.168.50.51/operaciones.txt")
+{
+    if($usuario.operacion -eq 1)
+    {
+        New-ADUser -Name $usuario.nombre -SamAccountName $usuario.nombre -AccountPassword (ConvertTo-SecureString "asdf1234." -AsPlainText -Force) -Enable $true
+        $usuario.nombre | wsl qrencode -o qr.png
+    }
+}
 ```
