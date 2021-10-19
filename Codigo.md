@@ -23,9 +23,9 @@ Get-WmiObject -Class Win32_thread | Select-Object handle,ProcessHandle,@{Name="p
 ```
 ## Script que nos muestra la ip de los logs de nuestro servidor apache en este caso en XAMPP
 ``` powershell
-gc C:\xampp\apache\logs\access.log
+get-content C:\xampp\apache\logs\access.log
 
-foreach($linea in gc C:\xampp\apache\logs\access.log)
+foreach($linea in get-content C:\xampp\apache\logs\access.log)
 {
     $linea.split(" ")[0]
 }
