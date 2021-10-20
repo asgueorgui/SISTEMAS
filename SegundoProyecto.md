@@ -1,6 +1,6 @@
 # Proyecto: analizar procesos utilizando Bases de Datos
 ``` powershell
-## Conexion a mysql
+## Conexion a mysql ##
 
 [void][System.Reflection.Assembly]::LoadWithPartialName("MySql.Data")
 $Connection = New-Object MySql.Data.MySqlClient.MySqlConnection
@@ -8,7 +8,7 @@ $ConnectionString = "server=" + "localhost" + ";port=3306;uid=" + "root" + ";pwd
 $Connection.ConnectionString = $ConnectionString
 $Connection.Open()
 
-# Realiza un hash a los fichero ejecutables system32 y selecciona los 3 primeros.
+## Realiza un hash a los fichero ejecutables system32 y selecciona los 3 primeros ## 
 
 foreach($hash2 in Get-ChildItem C:\Windows\System32\*.exe | select -First 3)
 {
@@ -25,7 +25,7 @@ foreach($hash2 in Get-ChildItem C:\Windows\System32\*.exe | select -First 3)
     $Connection.Close()
 }
 
-# Consultar informacion de la base datos.
+## Consultar informacion de la base datos ##
 
     $Query = 'select * from hash'
     $Command = New-Object MySql.Data.MySqlClient.MySqlCommand($Query, $Connection)
@@ -36,7 +36,7 @@ foreach($hash2 in Get-ChildItem C:\Windows\System32\*.exe | select -First 3)
     $Connection.Close()
 
 
-# Ejecucion de un CMDLET de forma paralela en ambos equipos
+## Ejecucion de un CMDLET de forma paralela en ambos equipos ##
 
 $win10 = 'DESKTOP-FC5TSEH'
 
@@ -46,6 +46,7 @@ $var1 = (Invoke-Command -ScriptBlock {foreach ($numhash in Get-ChildItem C:\Wind
      (Get-FileHash $numhash.FullName).hash
 }} -ComputerName $win10)[1]
 
+## Comprobar si los hashes son iguales o no ##
 
 foreach($agent in $DataSet.Tables)
 {
