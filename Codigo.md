@@ -30,6 +30,18 @@ foreach($linea in get-content C:\xampp\apache\logs\access.log)
     $linea.split(" ")[0]
 }
 ```
-
-
+# GHz de nuestro procesador
+``` powershell
+foreach($gh in Get-CimInstance win32_processor)
+{
+       $gh.name.split("@")[1].trim()
+}
+``` 
+# Con WSL sacar los nombres ordenados
+``` powershell
+foreach($usuario in (wsl cat -f1 -d : /etc/passwd))
+{
+    $usuario.split(":")[0] + " -> " $usuario.Split(":")[0].length
+}
+```
 
