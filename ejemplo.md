@@ -1,3 +1,3 @@
 ```powershell
-Get-Process | select name 
+Get-Process | select Nmae
 ```
