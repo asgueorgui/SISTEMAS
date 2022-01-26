@@ -1,3 +1,3 @@
 ```powershell
-(Get-Process).Threads.Count
+Get-Process
 ```
