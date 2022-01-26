@@ -1,3 +1,3 @@
 ```powershell
-Get-Process
+(Get-Process).name
 ```
