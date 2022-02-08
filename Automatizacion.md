@@ -3,7 +3,7 @@
 (Get-NetTCPConnection -LocalPort 80).OwningProcess
 Get-Process -Id 7016
 ```
-## Saber si Apache está funcionando
+## Saber si Apache está funcionando, si no es asi arrancarlo.
 ```powershell
 $apache = Get-Service | where name -Match "apache"
 
@@ -16,4 +16,4 @@ $apache = Get-Service | where name -Match "apache"
         Stop-Service $apache.Name
     }
 ```
-## Parar todo lo que esta esuchando el puerto 80 que no sea Apache
+## Parar todo lo que esta esuchando el puerto 80 que no sea Apache.
