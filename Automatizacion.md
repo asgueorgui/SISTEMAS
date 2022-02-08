@@ -3,7 +3,7 @@
 (Get-NetTCPConnection -LocalPort 80).OwningProcess
 Get-Process -Id 7016
 ```
-## Saber si Apache está funcionando en varios servidores
+## Saber si Apache está funcionando
 ```powershell
 $apache = Get-Service | where name -Match "apache"
 
